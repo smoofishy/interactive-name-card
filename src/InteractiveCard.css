@@ -1,0 +1,51 @@
+.ia-container {
+    display: inline-block;
+    perspective: 1200px;
+    cursor: grab;
+    user-select: none;
+  }
+  
+  .ia-container:active {
+    cursor: grabbing;
+  }
+  
+  .ia-card {
+    width: 100%;
+    height: 100%;
+    border-radius: 0; /* square corners */
+    overflow: hidden;
+    position: relative;
+    transform-style: preserve-3d;
+    box-shadow: 0 12px 30px rgba(12, 20, 30, 0.18);
+    background: #111;
+    transition: transform 0.1s ease;
+    will-change: transform;
+  }
+  
+  .ia-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .ia-overlay {
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    mix-blend-mode: color-dodge;
+    filter: brightness(1.05) opacity(0.85);
+    background: linear-gradient(
+      105deg,
+      transparent 40%,
+      rgba(255, 219, 112, 0.85) 45%,
+      rgba(132, 50, 255, 0.6) 50%,
+      transparent 54%
+    );
+    background-repeat: no-repeat;
+  }
+  
