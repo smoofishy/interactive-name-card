@@ -1,9 +1,15 @@
 import React from "react";
 import InteractiveCard from "./InteractiveCard";
 import "./InteractiveCard.css";
+import { Helmet } from "react-helmet";
 
 function App() {
   return (
+    <>
+    <Helmet>
+      <title>Kevin Hyun Portfolio</title>
+      <meta name="description" content="Interactive portfolio with business card" />
+    </Helmet>
     <div style={{ display: "flex",
       justifyContent: "center",  // horizontal centering
       alignItems: "center",      // vertical centering
@@ -16,6 +22,7 @@ function App() {
         />
       </InteractiveCard>
     </div>
+    </>
   );
 }
 
